@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="output.css">
+<link rel="stylesheet" href="../Assets/vendors/fontawesome/css/all.min.css">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</head>
+<body class="font-mainFont">
+    <header class="bg-green-700 md:sticky top-0">
+        <nav class="flex justify-between items-center  w-[92%] mx-auto py-2">
+        <div>
+           <a href="./index.html"><p class="text-3xl text-white">A<span class="text-black">E</span>SA</p></a>
+        </div>
+        <div class="nav-links duration-500 md:static absolute text-white md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5">
+            <ul class="flex md:flex-row flex-col imd:tems-center md:gap-[4vw] gap-8">
+                <li>
+                   <a class="hover:text-green-700 active" href="#">Products</a> 
+                </li>
+                <li>
+                   <a class="hover:text-green-700" href="#">menu</a> 
+                </li>
+                <li>
+                   <a class="hover:text-green-700" href="#">price</a> 
+                </li>
+                <li>
+                   <a class="hover:text-green-700" href="#">other</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6"> 
+            <!-- px : padding left and right -->
+            <!-- py : padding top and bottom -->
+            <!-- rounded-full : faire des bordure arrondi partout -->
+            <button class="bg-black text-white border-black border-2 px-5 py-1 rounded-full hover:bg-transparent hover:text-black transition duration-700 ease-in-out">Se connecter</button>
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
+    </nav>
+    </header>
+    <!-- Banner section -->
+    <section id="banner" class="h-screen md:flex">
+        <div class="basis-1/2 flex ">
+            <div class="flex flex-col mx-auto items-center justify-center w-80 ">
+                <p class="text-7xl pb-4">A<span class="text-green-700">E</span>SA</p>
+            <p class="leading-7 pb-4">Etre dans une bonne équipe est toujous mieux qu'être seul, préparons une avenir radieux pour la ville du sambirano</p>
+            <a href="#" class="bg-green-700 text-white border-2 border-green-700 rounded-full py-1 px-3 transition ease-in-out hover:scale-110 duration-300">S'inscrire</a>
+            </div>
+        </div>
+        <div class="basis-1/2 flex justify-center">
+            <div class="flex flex-col justify-center align-middle">
+                <img src="../Assets/images/banner-1.svg" width="600px" height="600px" alt="Banner">
+            </div>
+            
+        </div>
+    </section>
+    <!-- Activity section -->
+        <section class="bg-[url('../Assets/images/bg-activitie.svg')] bg-no-repeat bg-right py-5">
+            <h1 class="text-[24px] font-secondaryFont text-center bottomBord">Activités</h1>
+            <div class="flex w-[80%] gap-10 justify-center mx-auto my-5 ">
+                <div class="w-1/6 h-1/6 text-center border rounded-lg cursor-pointer overflow-hidden">
+                    <img src="../Assets/images/for_test.jpg" alt="">
+                    <span>Lorem ipsum</span> 
+                </div>
+                <div class="w-1/6 h-1/6 text-center border rounded-lg overflow-hidden">
+                    <img src="../Assets/images/for_test.jpg" alt="">
+                    <span>Lorem ipsum</span> 
+                </div>
+                <div class="w-1/6 h-1/6 text-center border rounded-lg overflow-hidden">
+                    <img src="../Assets/images/for_test.jpg" alt="">
+                    <span>Lorem ipsum</span> 
+                </div>
+                <div class="w-1/6 h-1/6 text-center border rounded-lg overflow-hidden">
+                    <img src="../Assets/images/for_test.jpg" alt="">
+                    <span>Lorem ipsum</span> 
+                </div>
+            </div>
+        </section>
+    <!-- Concepts section -->
+        <section>
+            <h1 class="text-[24px] font-secondaryFont text-center bottomBord">Concepts</h1>
+            <div class="flex w-[80%] gap-10 justify-center mx-auto my-5 ">
+                <div class="text-center">
+                    <i class="fa-solid fa-user text-7xl"></i>
+                    <p >Entraide</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-user text-7xl"></i>
+                    <p >Fraternité</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-chart-simple text-7xl"></i>
+                    <p>Evolutivité</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-user text-7xl"></i>
+                    <p>Paix</p>
+                </div>
+            </div>
+        </section>
+    <!-- Photos section -->
+        <section>
+                
+        </section>
+    <script>
+        function onToggleMenu(e){
+            const navLinks = document.querySelector('.nav-links ')
+           e.name = e.name === 'menu' ? 'close' : 'menu'
+           navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+</html>

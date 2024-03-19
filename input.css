@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+@font-face {
+    font-family: 'novaMono';
+    src: url(../Assets/fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+@font-face {
+    font-family: 'lato';
+    src: url(../Assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@layer utilities{
+    .active{
+        @apply border-b-2 bg-black px-2 font-bold
+    }
+}
