@@ -13,9 +13,18 @@
     font-family: 'lato';
     src: url(../Assets/fonts/Lato/Lato-Regular.ttf);
 }
+@font-face {
+    font-family: 'poppins-regular';
+    src: url(../Assets/fonts/Poppins/poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'poppins-bold';
+    src: url(../Assets/fonts/Poppins/poppins-Bold.ttf);
+}
+
 
 @layer utilities{
     .active{
-        @apply border-b-2 bg-black px-2 font-bold
+        @apply border-b-2 pb-2 px-2 font-bold
     }
 }

@@ -6,8 +6,14 @@ module.exports = {
     extend: {
       fontFamily: {
         mainFont: ['novaMono'],
-        secondaryFont : ['lato']
+        secondaryFont : ['poppins-regular'],
+        thirdFont : ['poppins-bold'],
+
       },
+      colors:{
+        primary : '#001A57',
+        secondary : '#a9b3c8'
+      }
   },
     
   },
