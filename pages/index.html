@@ -8,25 +8,25 @@
 <link rel="stylesheet" href="output.css">
 <link rel="stylesheet" href="../Assets/vendors/fontawesome/css/all.min.css">
 </head>
-<body class="font-mainFont">
-    <header class="bg-primary sticky top-0">
-        <nav class="flex justify-between items-center  w-[92%] mx-auto py-2">
+<body class="font-mainFont text-white">
+    <header class="bg-primary sticky top-0 z-[3000]">
+        <nav class="flex justify-between items-center  w-[92%] mx-auto py-2 ">
         <div>
            <a href="./index.html"><p class="text-3xl text-white">AESA</p></a>
         </div>
-        <div class="nav-links md:static top-[-400px] absolute text-white z-[-1] md:min-h-fit md:w-auto min-h-[10vh] left-0 w-full flex items-center md:px-5 px-0 transition-all ease-in duration-500">
-            <ul class="flex md:flex-row px-3 py-4 w-full flex-col bg-primary backdrop-blur-lg md:items-center md:gap-[4vw] gap-8">
+        <div class="nav-links md:static top-[-400px] absolute text-white md:min-h-fit md:w-auto min-h-[10vh] left-0 w-full flex items-center md:px-5 px-0 transition-all ease-in duration-500">
+            <ul class="flex md:flex-row px-3 py-4 w-full flex-col md:bg-primary bg-primary/95 backdrop-blur-sm md:items-center md:gap-[4vw] gap-8">
                 <li>
-                   <a class="hover:text-green-700 active" href="#">Products</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2 active" href="#">Products</a> 
                 </li>
                 <li>
-                   <a class="hover:text-green-700" href="#">menu</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">menu</a> 
                 </li>
                 <li>
-                   <a class="hover:text-green-700" href="#">price</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">price</a> 
                 </li>
                 <li>
-                   <a class="hover:text-green-700" href="#">other</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">other</a> 
                 </li>
             </ul>
         </div>
@@ -46,7 +46,7 @@
     <section id="banner" class="h-screen flex bg-[url('../Assets/images/bg-banner.jpg')] bg-no-repeat bg-cover bg-center">
         <div class="flex items-center bg-gradient-to-r from-[#dbdbdb] w-full h-full to-[#ffffff09]">
             <div class="flex flex-col  md:w-[40%] md:mx-10 mx-auto w-96">
-                <p class="font-secondaryFont">L'union fait la force</p>
+                <p class="font-secondaryFont text-secondary">Réussissons ensemble</p>
                 <p class="md:text-5xl text-3xl pb-4 font-thirdFont">Association des Etudiants <span class="text-primary">Sambirano</span> Antsiranana</p>
             <!-- <p class="leading-10 pb-4 md:text-2xl font-secondaryFont">Etre dans une bonne équipe est toujous mieux qu'être seul, préparons une avenir radieux pour la ville du sambirano</p> -->
             <a href="#" class="bg-white text-primary rounded-md  p-3 transition ease-in-out duration-300 hover:scale-110 hover:bg-primary hover:text-white w-28">S'inscrire</a>
@@ -60,10 +60,61 @@
             
         </div> -->
     </section>
+    <!-- About association -->
+    <section id="about-section" class="bg-primary py-4 flex md:flex-row flex-col px-2 gap-6 font-secondaryFont items-center justify-center">
+ <h2 class="md:w-[25%] w-full text-2xl md:text-left text-center">Vivez en groupe pour une meilleur experience universitaire</h2>
+ <p class="md:w-[60%] w-full text-secondary md:text-left before:content-[' '] md:before:w-[4px] md:before:h-[10%] md:before:bg-secondary md:before:absolute md:before:left-[27%] md:before:rounded-full text-center">Une association qui regroupe tous venant de la ville d'Ambanja qui s'y intéresse, ensemble on collabore pour avoir la meilleur résultat possible</p>
+ <div class="flex ">
+ <a href="#" class=" bg-white text-primary rounded-md  p-3 transition ease-in-out duration-300 hover:scale-110 hover:bg-primary hover:text-white">S'inscrire</a>
+</div>
+
+    
+    </section>
+
+    <!-- Concepts section -->
+    <section class="py-16 ">
+        <h1 class=" font-secondaryFont text-center text-black text-4xl border-bottom">Concepts</h1>
+        <div class="group flex md:flex-row flex-col w-[80%] gap-10 justify-center  mx-auto mt-[50px]">
+            <div class="text-center bg-black/5 group-hover:blur-sm group-hover:scale-[0.85] duration-500 hover:!blur-none hover:!scale-100 rounded-lg cursor-pointer space-y-3 p-3 ">
+                <i class="fa-solid fa-people-carry-box text-7xl text-secondary"></i>
+                <p class="text-primary">Entraide</p>
+                <p class="text-black font-secondaryFont">Etre dans une association permet à chacun de profiter d'une vie communautaire non loin d'une ambiance familiale</p>
+            </div>
+            <div class="text-center bg-black/5 group-hover:blur-sm group-hover:scale-[0.85] duration-500 hover:!blur-none hover:!scale-100 rounded-lg cursor-pointer space-y-3 p-3">
+                <i class="fa-solid fa-user text-7xl text-secondary"></i>
+                <p class="text-primary">Fraternité</p>
+                <p class="text-black font-secondaryFont">Etre dans une association permet à chacun de profiter d'une vie communautaire non loin d'une ambiance familiale</p>
+            </div>
+            <div class="text-center bg-black/5 group-hover:blur-sm group-hover:scale-[0.85] duration-500 hover:!blur-none hover:!scale-100 rounded-lg cursor-pointer space-y-3 p-3">
+                <i class="fa-solid fa-chart-simple text-7xl text-secondary"></i>
+                <p class="text-primary">Evolutivité</p>
+                <p class="text-black font-secondaryFont">Etre dans une association permet à chacun de profiter d'une vie communautaire non loin d'une ambiance familiale</p>
+            </div>
+            <div class="text-center bg-black/5 group-hover:blur-sm group-hover:scale-[0.85] duration-500 hover:!blur-none hover:!scale-100 rounded-lg cursor-pointer space-y-3 p-3">
+                <i class="fa-solid fa-hand-peace text-7xl text-secondary"></i>
+                <p class="text-primary">Paix</p>
+                <p class="text-black font-secondaryFont">Etre dans une association permet à chacun de profiter d'une vie communautaire non loin d'une ambiance familiale</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Activity section -->
-        <section class=" py-5">
-            <h1 class="text-[24px] bg-[#00FF0020] font-secondaryFont text-center bottomBord">Activités</h1>
-            <div class="flex flex-wrap justify-center mx-auto my-5 ">
+        <section class="py-5 bg-red-50 w-full h-[570px] p-24 relative overflow-hidden block z-10 bg-[url('../Assets/images/bg-africa.jpg')]
+        bg-cover
+        bg-no-repeat
+        bg-center
+        bg-fixed
+        before:content-['']
+        before:absolute
+        before:inset-0
+        before:block
+        before:bg-primary
+        before:opacity-75
+        before:z-[-5]">
+            <div id="back" class="h-[570px] mb-11 rounded-sm m-4">
+                <h1 class=" font-secondaryFont text-center text-4xl border-bottom">Activités</h1>
+                <p class="text-center font-secondaryFont mt-5">Les activités Au sein de l'association</p>
+             <div class="flex flex-wrap justify-center mx-auto my-5 mt-15  bg-red-800">
                 <div class="flex flex-col rounded-lg shadow-md w-full m-3 sm:w-52 overflow-hidden">
                     <img src="../Assets/images/for_test.jpg" class="" alt="">
                     <span class="text-center px-2 pb-5">Lorem ipsum</span> 
@@ -82,32 +133,17 @@
                 </div>
                 
             </div>
-        </section>
-    <!-- Concepts section -->
-        <section>
-            <h1 class=" font-secondaryFont text-center text-green-700 text-4xl">Concepts</h1>
-            <div class="flex w-[80%] gap-10 justify-center mx-auto my-5 ">
-                <div class="text-center">
-                    <i class="fa-solid fa-user text-7xl"></i>
-                    <p >Entraide</p>
-                </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-user text-7xl"></i>
-                    <p >Fraternité</p>
-                </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-chart-simple text-7xl"></i>
-                    <p>Evolutivité</p>
-                </div>
-                <div class="text-center">
-                    <i class="fa-solid fa-user text-7xl"></i>
-                    <p>Paix</p>
-                </div>
             </div>
+            
         </section>
+    
     <!-- Photos section -->
         <section>
-                
+                <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci inventore obcaecati molestiae dolores iste fuga fugit accusantium repellendus sequi. Voluptas a consectetur laborum dolore eius veritatis itaque expedita inventore voluptates!
+                Nulla amet numquam ut quos, vero impedit veniam in illo autem quaerat aliquid voluptas iste sed, quod vitae aspernatur magni sapiente labore officiis earum. Vero tenetur placeat ullam? Cum, maiores?
+                Quidem odit eveniet debitis aperiam rerum a cumque, natus quae veritatis dicta repudiandae necessitatibus saepe impedit. Animi, cumque nam placeat quos error eum dignissimos. At est quasi sunt excepturi esse.
+                Modi ad, eum quae praesentium sed debitis officia. Neque, nihil quasi! Tempore quos cum perferendis cumque itaque commodi nisi fuga, quas fugit quod rem nobis ullam quis eius numquam incidunt.
+                Repellat commodi dolores blanditiis pariatur, nostrum vitae laboriosam ipsam doloribus eos quaerat! Laudantium omnis numquam perspiciatis autem, cumque aperiam harum ex, repellendus quasi nam iure totam necessitatibus quibusdam, id pariatur.</p>
         </section>
     <script>
         function onToggleMenu(e){

@@ -22,6 +22,19 @@
     src: url(../Assets/fonts/Poppins/poppins-Bold.ttf);
 }
 
+.border-bottom::after{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    border-radius : 20px;
+    top: 10px;
+    z-index: -2;
+    position: relative;
+    left : 49%;
+    background-color: #a9b3c8;
+    text-align: center;
+}
 
 @layer utilities{
     .active{
