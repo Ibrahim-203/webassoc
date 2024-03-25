@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="../Assets/vendors/fontawesome/css/all.min.css">
+    <title>Admin</title>
+</head>
+<body class="font-secondaryFont">
+    <span class="text-white absolute top-5 left-4 bg-primary text-4xl py-5 px-3 rounded-md" onclick="Open()">
+            <i class="fa-solid fa-bars fa-2xl text-white cursor-pointer"></i>
+    </span>
+    <div class="sidebar fixed lg:left-0 left-[-300px] top-0 bottom-0 w-[300px] bg-primary text-center overflow-y-auto">
+        
+        <div class="text-gray-100 text-xl">
+            <div class="p-2.5 mt-1 flex items-center">
+                <i class="fa fa-book fa-2x"></i>
+                <h1 class="font-bold text-gray-200 text-[30px] ml-3 "> AEMA</h1>
+                <span class="lg:hidden">
+                    <i class="fa fa-xmark ml-32 cursor-pointer" onclick=" Open()"></i>
+                </span>
+            </div>
+            <hr class="my-2 text-gray-600">
+            
+        </div>
+            <div class="p-2.5 mt-1 flex items-center cursor-pointer rounded-md duration-500 hover:bg-blue-500 px-4 text-white">
+                <i class="fa fa-home"></i>
+                <h1 class=" text-gray-200 text-[15px] ml-4"> Accueil</h1>
+            </div>
+            <div class="p-2.5 mt-1 flex items-center cursor-pointer rounded-md duration-500 hover:bg-blue-500 px-4 text-white">
+                <i class="fa fa-users"></i>
+                <h1 class=" text-gray-200 text-[15px] ml-4"> Membres</h1>
+            </div>
+            <hr class="my-2 text-gray-600">
+            <div class="p-2.5 mt-1 flex items-center cursor-pointer rounded-md duration-500 hover:bg-blue-500 px-4 text-white" onclick="dropdown()">
+                <i class="fa fa-edit"></i>
+                <div class="flex items-center justify-between w-full">
+                    <span class="text-gray-200 text-[15px] ml-4" >Collapse</span>
+                    <span class="text-sm rotate-180" id="arrow">
+                        <i class="fa fa-chevron-down"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-200" id="submenu">
+                <h1 class="cursor-pointer rounded-md hover:bg-gray-600 p-2">Sub 1</h1>
+                <h1 class="cursor-pointer rounded-md hover:bg-gray-600 p-2">Sub 2</h1>
+                <h1 class="cursor-pointer rounded-md hover:bg-gray-600 p-2">Sub 3</h1>
+            </div>
+            <div class="p-2.5 mt-1 flex items-center cursor-pointer rounded-md duration-500 hover:bg-blue-500 px-4 text-white">
+                <i class="fa fa-box-open"></i>
+                <h1 class=" text-gray-200 text-[15px] ml-4"> logout</h1>
+            </div>
+    </div>
+    <script type="text/javascript">
+    
+        function dropdown(){
+            document.querySelector('#arrow').classList.toggle("rotate-0")
+            document.querySelector('#submenu').classList.toggle("hidden")
+        }
+        function Open(){
+            document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+        }
+    </script>
+</body>
+</html>

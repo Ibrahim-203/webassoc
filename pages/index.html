@@ -7,6 +7,7 @@
   
 <link rel="stylesheet" href="output.css">
 <link rel="stylesheet" href="../Assets/vendors/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="../Assets/vendors/lightbox/dist/css/lightbox.min.css">
 </head>
 <body class="font-mainFont text-white">
     <header class="bg-primary sticky top-0 z-[3000]">
@@ -17,16 +18,16 @@
         <div class="nav-links md:static top-[-400px] absolute text-white md:min-h-fit md:w-auto min-h-[10vh] left-0 w-full flex items-center md:px-5 px-0 transition-all ease-in duration-500">
             <ul class="flex md:flex-row px-3 py-4 w-full flex-col md:bg-primary bg-primary/95 backdrop-blur-sm md:items-center md:gap-[4vw] gap-8">
                 <li>
-                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2 active" href="#">Products</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2 active" href="./index.html">Accueil</a> 
                 </li>
                 <li>
-                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">menu</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">Activités</a> 
                 </li>
                 <li>
-                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">price</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">Evenements</a> 
                 </li>
                 <li>
-                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">other</a> 
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="./contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -34,7 +35,7 @@
             <!-- px : padding left and right -->
             <!-- py : padding top and bottom -->
             <!-- rounded-full : faire des bordure arrondi partout -->
-            <button class="bg-white text-primary px-5 py-1 rounded-lg border-2 border-white hover:bg-primary hover:text-white transition duration-700 ease-in-out">Se connecter</button>
+            <a href="./login.html" class="bg-white text-primary px-5 py-1 rounded-lg border-2 border-white hover:bg-primary hover:text-white transition duration-700 ease-in-out">Se connecter</a>
             <span class="md:hidden">
                 <i onclick="onToggleMenu(this)" id="burger" class="fa-solid fa-bars fa-2xl text-white cursor-pointer"></i>
             </span>
@@ -99,7 +100,7 @@
     </section>
 
     <!-- Activity section -->
-        <section class="py-5 bg-red-50 w-full h-[570px] p-24 relative overflow-hidden block z-10 bg-[url('../Assets/images/bg-africa.jpg')]
+        <section class="py-5 bg-red-50 w-full min-h-[570px] md:p-24 p-5 relative overflow-hidden block z-10 bg-[url('../Assets/images/bg-africa.jpg')]
         bg-cover
         bg-no-repeat
         bg-center
@@ -111,40 +112,77 @@
         before:bg-primary
         before:opacity-75
         before:z-[-5]">
-            <div id="back" class="h-[570px] mb-11 rounded-sm m-4">
+            <div id="back" class=" mb-11 rounded-sm m-4">
                 <h1 class=" font-secondaryFont text-center text-4xl border-bottom">Activités</h1>
                 <p class="text-center font-secondaryFont mt-5">Les activités Au sein de l'association</p>
-             <div class="flex flex-wrap justify-center mx-auto my-5 mt-15  bg-red-800">
-                <div class="flex flex-col rounded-lg shadow-md w-full m-3 sm:w-52 overflow-hidden">
-                    <img src="../Assets/images/for_test.jpg" class="" alt="">
-                    <span class="text-center px-2 pb-5">Lorem ipsum</span> 
-                </div>
-                <div class="flex flex-col rounded-lg shadow-md w-full m-3 sm:w-52 overflow-hidden">
-                    <img src="../Assets/images/for_test.jpg" class="" alt="">
-                    <span class="text-center px-2 pb-5">Lorem ipsum</span> 
-                </div>
-                <div class="flex flex-col rounded-lg shadow-md w-full m-3 sm:w-52 overflow-hidden">
-                    <img src="../Assets/images/for_test.jpg" class="" alt="">
-                    <span class="text-center px-2 pb-5">Lorem ipsum</span> 
-                </div>
-                <div class="flex flex-col rounded-lg shadow-md w-full m-3 sm:w-52 overflow-hidden">
-                    <img src="../Assets/images/for_test.jpg" class="" alt="">
-                    <span class="text-center px-2 pb-5">Lorem ipsum</span> 
-                </div>
-                
-            </div>
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-4">
+                    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                      <div class="h-96 w-100">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="../Assets/images/cercle-etude.jpg" alt="" />
+                      </div>
+                      <div class="absolute inset-0 group-hover:bg-primary/70 group-hover:from-black/70 "></div>
+                      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                        <h1 class="font-dmserif text-3xl font-bold text-white">Cercle d'étude</h1>
+                        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+                        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+                      </div>
+                    </div>
+                    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                      <div class="h-96 w-100">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="../Assets/images/foot.jpg" alt="" />
+                      </div>
+                      <div class="absolute inset-0 group-hover:bg-primary/70 group-hover:from-black/70 "></div>
+                      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                        <h1 class="font-dmserif text-3xl font-bold text-white">Tournois paques</h1>
+                        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+                        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+                      </div>
+                    </div>
+                    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                      <div class="h-96 w-100">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125" src="../Assets/images/111.jpg" alt="" />
+                      </div>
+                      <div class="absolute inset-0 group-hover:bg-primary/70"></div>
+                      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                        <h1 class="text-3xl font-bold text-white">Cours de cuisine</h1>
+                        <p class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+                        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+                      </div>
+                    </div>
+                  </div>
             </div>
             
         </section>
     
     <!-- Photos section -->
-        <section>
-                <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci inventore obcaecati molestiae dolores iste fuga fugit accusantium repellendus sequi. Voluptas a consectetur laborum dolore eius veritatis itaque expedita inventore voluptates!
-                Nulla amet numquam ut quos, vero impedit veniam in illo autem quaerat aliquid voluptas iste sed, quod vitae aspernatur magni sapiente labore officiis earum. Vero tenetur placeat ullam? Cum, maiores?
-                Quidem odit eveniet debitis aperiam rerum a cumque, natus quae veritatis dicta repudiandae necessitatibus saepe impedit. Animi, cumque nam placeat quos error eum dignissimos. At est quasi sunt excepturi esse.
-                Modi ad, eum quae praesentium sed debitis officia. Neque, nihil quasi! Tempore quos cum perferendis cumque itaque commodi nisi fuga, quas fugit quod rem nobis ullam quis eius numquam incidunt.
-                Repellat commodi dolores blanditiis pariatur, nostrum vitae laboriosam ipsam doloribus eos quaerat! Laudantium omnis numquam perspiciatis autem, cumque aperiam harum ex, repellendus quasi nam iure totam necessitatibus quibusdam, id pariatur.</p>
+        <section class="my-10">
+            <h1 class=" font-secondaryFont text-center text-black text-4xl border-bottom">Photos</h1>
+            <p class="text-black text-center mt-5 font-secondaryFont">Photos souvenir des étudiants au sein de l'association</p>
+            <div class="my-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-[80%]">
+                <div class="overflow-hidden hover:rounded-md transition-all">
+                    <a class="example-image-link" href="../Assets/images/photo-1.jpg" data-lightbox="example-set"><img src="../Assets/images/photo-1.jpg" class="example-image hover:grayscale hover:scale-105 transition-all" alt=""></a>
+                </div>
+                <div class="overflow-hidden">
+                    <a class="example-image-link" href="../Assets/images/photo-1.jpg" data-lightbox="example-set"><img src="../Assets/images/photo-1.jpg" class="example-image hover:grayscale hover:scale-105 transition-all" alt=""></a>
+                </div>
+                <div class="overflow-hidden">
+                    <a class="example-image-link" href="../Assets/images/photo-1.jpg" data-lightbox="example-set"><img src="../Assets/images/photo-1.jpg" class="example-image hover:grayscale hover:scale-105 transition-all" alt=""></a>
+                </div>
+                <div class="overflow-hidden">
+                    <a class="example-image-link" href="../Assets/images/photo-1.jpg" data-lightbox="example-set"><img src="../Assets/images/photo-1.jpg" class="hover:grayscale hover:scale-105 transition-all" alt=""></a>
+                </div>
+                <div class="overflow-hidden">
+                    <a class="example-image-link" href="../Assets/images/photo-1.jpg" data-lightbox="example-set"><img src="../Assets/images/photo-1.jpg" class="hover:grayscale hover:scale-105 transition-all" alt=""></a>
+                </div>
+            </div>
         </section>
+        
+        <footer class="bg-primary">
+            <div>
+                Copyright 2024 AESA 
+            </div>
+        </footer>
+        <script src="../Assets/vendors/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
     <script>
         function onToggleMenu(e){
             const navLinks = document.querySelector('.nav-links ')

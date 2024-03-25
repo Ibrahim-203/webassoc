@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+
+    <!-- barre de navigation -->
+    <header class="bg-primary sticky top-0 z-[3000]">
+        <nav class="flex justify-between items-center  w-[92%] mx-auto py-2 font-mainFont">
+        <div>
+           <a href="./index.html"><p class="text-3xl text-white">AESA</p></a>
+        </div>
+        <div class="nav-links md:static top-[-400px] absolute text-white md:min-h-fit md:w-auto min-h-[10vh] left-0 w-full flex items-center md:px-5 px-0 transition-all ease-in duration-500">
+            <ul class="flex md:flex-row px-3 py-4 w-full flex-col md:bg-primary bg-primary/95 backdrop-blur-sm md:items-center md:gap-[4vw] gap-8">
+                <li>
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2 " href="./index.html">Accueil</a> 
+                </li>
+                <li>
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">Activités</a> 
+                </li>
+                <li>
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2" href="#">Evenements</a> 
+                </li>
+                <li>
+                   <a class="hover:text-secondary hover:border-b-2 hover:border-white hover:pb-2 active" href="#">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6"> 
+            <!-- px : padding left and right -->
+            <!-- py : padding top and bottom -->
+            <!-- rounded-full : faire des bordure arrondi partout -->
+            <button class="bg-white text-primary px-5 py-1 rounded-lg border-2 border-white hover:bg-primary hover:text-white transition duration-700 ease-in-out">Se connecter</button>
+            <span class="md:hidden">
+                <i onclick="onToggleMenu(this)" id="burger" class="fa-solid fa-bars fa-2xl text-white cursor-pointer"></i>
+            </span>
+            
+        </div>
+    </nav>
+    </header>
+    
+    <section class="flex justify-center items-center mt-14 flex-col md:gap-5 gap-10">
+        <h1 class="border-bottom text-3xl">Contactez-nous</h1>
+        <p class="px-5 text-center">Envoie nous un retour ici, et nous ferons un grand plaisir de vous répondre.</p>
+        <div class="flex md:w-[80%] rounded-md overflow-hidden shadow-xl">
+            <div class="bg-[url(../Assets/images/bg-africa.jpg)] bg-cover hidden md:inline-flex basis-1/2"></div>
+            <div class="mt-7  md:basis-1/2 p-5">
+                <form action="" method="post" class="grid grid-cols-2 gap-2 *:outline-none *:border-b-2 *:placeholder-gray-300">
+                    <input type="text" name="name" class="focus:placeholder-opacity-0" placeholder="Nom">
+                    <input type="text" name="phone" class="focus:placeholder-opacity-0" placeholder="Phone">
+                    <input type="text" name="email" class="focus:placeholder-opacity-0" placeholder="email">
+                    <input type="text" name="website"  class="focus:placeholder-opacity-0" placeholder="website">
+                    <textarea name="message" id="" cols="" placeholder="Message" rows="5" class="col-span-2 resize-none focus:placeholder-opacity-0"></textarea>
+                    <button class="blue-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-primary mt-5 absolute inset-x-0 bottom-0">
+        <div class="text-white">
+            Copyright 2024 AESA 
+        </div>
+    </footer>
+</body>
+</html>
