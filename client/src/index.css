@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'novaMono';
+    src: url(../Assets/fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+@font-face {
+    font-family: 'lato';
+    src: url(../Assets/fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: 'poppins-regular';
+    src: url(../Assets/fonts/Poppins/poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'poppins-bold';
+    src: url(../Assets/fonts/Poppins/poppins-Bold.ttf);
+}
+
+.border-bottom::after{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    border-radius : 20px;
+    top: 10px;
+    z-index: -2;
+    position: relative;
+    left : 49%;
+    background-color: #a9b3c8;
+    text-align: center;
+}
+
+@layer utilities{
+    .active{
+        @apply border-b-2 pb-2 px-2 font-bold
+    }
+    .blue-btn{
+        @apply bg-blue-600 border-2 border-blue-600 px-3 py-2 rounded-md text-white hover:text-black hover:bg-transparent
+    }
+}
