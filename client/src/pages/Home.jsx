@@ -1,4 +1,5 @@
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPeopleCarryBox, faUser,faChartSimple, faHandPeace } from "@fortawesome/free-solid-svg-icons";
@@ -120,6 +121,186 @@ const Home = () => {
         </div>
       </div>
     </section>
+
+    {/* <!-- Activity section --> */}
+    <section
+      className="py-5 bg-red-50 w-full min-h-[570px] md:p-24 p-5 relative overflow-hidden block z-10 bg-[url('../src/assets/images/bg-africa.jpg')] bg-cover bg-no-repeat bg-center bg-fixed before:content-[''] before:absolute before:inset-0 before:block before:bg-primary before:opacity-75 before:z-[-5] text-white"
+    >
+      <div id="back" className="mb-11 rounded-sm m-4">
+        <h1 className="font-secondaryFont text-center text-4xl border-bottom">
+          Activités
+        </h1>
+        <p className="text-center font-secondaryFont mt-5">
+          Les activités Au sein de l'association
+        </p>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-4">
+          <div
+            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+          >
+            <div className="h-96 w-100">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
+                src="../src/assets/images/cercle-etude.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              className="absolute inset-0 group-hover:bg-primary/70 group-hover:from-black/70"
+            ></div>
+            <div
+              className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+            >
+              <h1 className="font-dmserif text-3xl font-bold text-white">
+                Cercle d'étude
+              </h1>
+              <p
+                className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
+              </p>
+              <button
+                className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+          <div
+            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+          >
+            <div className="h-96 w-100">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
+                src="../src/assets/images/foot.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              className="absolute inset-0 group-hover:bg-primary/70 group-hover:from-black/70"
+            ></div>
+            <div
+              className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+            >
+              <h1 className="font-dmserif text-3xl font-bold text-white">
+                Tournois paques
+              </h1>
+              <p
+                className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
+              </p>
+              <button
+                className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+          <div
+            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+          >
+            <div className="h-96 w-100">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
+                src="../src/assets/images/111.jpg"
+                alt=""
+              />
+            </div>
+            <div className="absolute inset-0 group-hover:bg-primary/70"></div>
+            <div
+              className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+            >
+              <h1 className="text-3xl font-bold text-white">Cours de cuisine</h1>
+              <p
+                className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
+              </p>
+              <button
+                className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* <!-- Photos section --> */}
+    <section className="my-10">
+      <h1
+        className="font-secondaryFont text-center text-black text-4xl border-bottom"
+      >
+        Photos
+      </h1>
+      <p className="text-black text-center mt-5 font-secondaryFont">
+        Photos souvenir des étudiants au sein de l'association
+      </p>
+      <div
+        className="my-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-[80%]"
+      >
+        <div className="overflow-hidden hover:rounded-md transition-all">
+          <a
+            className="example-image-link"
+            href="../src/assets/images/photo-1.jpg"
+            data-lightbox="example-set"
+            ><img
+              src="../src/assets/images/photo-1.jpg"
+              className="example-image hover:grayscale hover:scale-105 transition-all"
+              alt=""
+          /></a>
+        </div>
+        <div className="overflow-hidden hover:rounded-md transition-all">
+          <a
+            className="example-image-link"
+            href="../src/assets/images/photo-1.jpg"
+            data-lightbox="example-set"
+            ><img
+              src="../src/assets/images/photo-1.jpg"
+              className="example-image hover:grayscale hover:scale-105 transition-all"
+              alt=""
+          /></a>
+        </div>
+        <div className="overflow-hidden hover:rounded-md transition-all">
+          <a
+            className="example-image-link"
+            href="../src/assets/images/photo-1.jpg"
+            data-lightbox="example-set"
+            ><img
+              src="../src/assets/images/photo-1.jpg"
+              className="example-image hover:grayscale hover:scale-105 transition-all"
+              alt=""
+          /></a>
+        </div>
+        <div className="overflow-hidden hover:rounded-md transition-all">
+          <a
+            className="example-image-link"
+            href="../src/assets/images/photo-1.jpg"
+            data-lightbox="example-set"
+            ><img
+              src="../src/assets/images/photo-1.jpg"
+              className="example-image hover:grayscale hover:scale-105 transition-all"
+              alt=""
+          /></a>
+        </div>
+        <div className="overflow-hidden hover:rounded-md transition-all">
+          <a
+            className="example-image-link"
+            href="../src/assets/images/photo-1.jpg"
+            data-lightbox="example-set"
+            ><img
+              src="../src/assets/images/photo-1.jpg"
+              className="example-image hover:grayscale hover:scale-105 transition-all"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </section>
+    <Footer/>
         </>
     );
 };
