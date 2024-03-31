@@ -10,6 +10,7 @@ import Activity from './pages/Activity'
 import Contact from './pages/Contact'
 import Event from './pages/Event'
 import Login from './pages/Login'
+import Admin from './pages/Admin'
 // bibliothèque de routage
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -43,6 +44,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/event' element={<Event/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/admin' element={<Admin/>}/>
       {/* Pour n'importe quel liens qui n'est pas définie au dessus */}
       <Route path='*' element={<Home/>}/>
      </Routes>
