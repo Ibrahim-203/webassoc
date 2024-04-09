@@ -30,7 +30,7 @@ function App() {
 
   useEffect(()=>{
     
-    axios.get("http://localhost:3001/users").then((response)=>{
+    axios.get("http://localhost:3001/auth").then((response)=>{
       setListOfUsers(response.data);
     })
   },[])

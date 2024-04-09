@@ -1,4 +1,23 @@
+import axios from 'axios';
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 const login = () => {
+
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const navigateTo = useNavigate();
+  const login = ()=>{
+    const data = {username:username, password : password}
+    console.log(data);
+    axios.post("http://localhost:3001/auth/login",data).then((response)=>{
+      if(!response.data){
+        alert(response.data.error)
+      }else{
+        sessionStorage.setItem("accessToken",response.data)
+        navigateTo("../admin")
+      }
+    })
+  }
   return (
     <>
       <div className="flex bg-primary items-center justify-center h-screen">
@@ -14,6 +33,9 @@ const login = () => {
               placeholder="Identifiant"
               type="text"
               name="Username"
+              onChange={(event)=>{
+                setUsername(event.target.value)
+              }}
             />
           </div>
           <div className="flex flex-col">
@@ -23,10 +45,13 @@ const login = () => {
               placeholder="Mot de passe"
               type="password"
               name="password"
+              onChange={(event)=>{
+                setPassword(event.target.value)
+              }}
             />
           </div>
           <div className="flex justify-center">
-            <button className="blue-btn ">Se connecter</button>
+            <button className="blue-btn" onClick={login}>Se connecter</button>
           </div>
         </div>
       </div>
