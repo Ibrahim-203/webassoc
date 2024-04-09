@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPeopleCarryBox, faUser,faChartSimple, faHandPeace } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -10,13 +11,15 @@ const Home = () => {
         <Navbar/>
        {/* <!-- Banner section --> */}
     <section id="banner" className="h-screen flex bg-[url('../src/assets/images/bg-banner.jpg')] bg-no-repeat bg-cover bg-center">
-        <div className="flex items-center bg-gradient-to-r from-[#dbdbdb] w-full h-full to-[#ffffff09]">
+        <div className="flex items-center bg-gradient-to-r from-[#dbdbdb94] w-full h-full to-[#ffffff01]">
             <div className="flex flex-col  md:w-[40%] md:mx-10 mx-auto w-96">
                 <p className="font-secondaryFont text-secondary text-">Réussissons ensemble</p>
                 <p className="md:text-5xl text-3xl pb-4 font-thirdFont">Association des Etudiants <span className="text-primary">Sambirano</span> Antsiranana</p>
             {/* <!-- <p className="leading-10 pb-4 md:text-2xl font-secondaryFont">Etre dans une bonne équipe est toujous mieux qu'être seul, préparons une avenir radieux pour la ville du sambirano</p> --> */}
             <div className="flex">
-            <a href="#" className="bg-white text-primary rounded-md  p-3 transition ease-in-out duration-300 hover:scale-110 hover:bg-primary hover:text-white">S'inscrire</a>
+            <NavLink to="./signup">
+            <span className="bg-white text-primary rounded-md  p-3 transition ease-in-out duration-300 hover:scale-110 hover:bg-primary hover:text-white">S'inscrire</span>
+            </NavLink>
             </div>
             </div>
         </div>
@@ -162,7 +165,7 @@ const Home = () => {
               <button
                 className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60"
               >
-                See More
+                Voir plus
               </button>
             </div>
           </div>
@@ -172,7 +175,7 @@ const Home = () => {
             <div className="h-96 w-100">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
-                src="../src/assets/images/foot.jpg"
+                src="../src/assets/images/havako-tournois.jpg"
                 alt=""
               />
             </div>
@@ -183,18 +186,17 @@ const Home = () => {
               className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
             >
               <h1 className="font-dmserif text-3xl font-bold text-white">
-                Tournois paques
+                Tournois Havakô
               </h1>
               <p
                 className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                dolore adipisci placeat.
+                Un tournois organisé par une ancien membre de l'association AESA Dr Rosni
               </p>
               <button
                 className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60"
               >
-                See More
+                Voir plus
               </button>
             </div>
           </div>
@@ -204,7 +206,7 @@ const Home = () => {
             <div className="h-96 w-100">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
-                src="../src/assets/images/111.jpg"
+                src="../src/assets/images/cuisine.jpg"
                 alt=""
               />
             </div>
@@ -212,17 +214,16 @@ const Home = () => {
             <div
               className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
             >
-              <h1 className="text-3xl font-bold text-white">Cours de cuisine</h1>
+              <h1 className="text-3xl font-bold text-white">formation cuisine</h1>
               <p
                 className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 font-secondaryFont"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                dolore adipisci placeat.
+                Le président de l'AESA organise une formation de cuisine pour aider ses membres à evoluer dans le domaine
               </p>
               <button
                 className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60"
               >
-                See More
+                Voir plus
               </button>
             </div>
           </div>
@@ -246,10 +247,10 @@ const Home = () => {
         <div className="overflow-hidden hover:rounded-md transition-all">
           <a
             className="example-image-link"
-            href="../src/assets/images/photo-1.jpg"
+            href="../src/assets/images/DSC_4126.jpg"
             data-lightbox="example-set"
             ><img
-              src="../src/assets/images/photo-1.jpg"
+              src="../src/assets/images/DSC_4126.jpg"
               className="example-image hover:grayscale hover:scale-105 transition-all"
               alt=""
           /></a>
@@ -257,10 +258,10 @@ const Home = () => {
         <div className="overflow-hidden hover:rounded-md transition-all">
           <a
             className="example-image-link"
-            href="../src/assets/images/photo-1.jpg"
+            href="../src/assets/images/DSC_4121.jpg"
             data-lightbox="example-set"
             ><img
-              src="../src/assets/images/photo-1.jpg"
+              src="../src/assets/images/DSC_4121.jpg"
               className="example-image hover:grayscale hover:scale-105 transition-all"
               alt=""
           /></a>
@@ -268,10 +269,10 @@ const Home = () => {
         <div className="overflow-hidden hover:rounded-md transition-all">
           <a
             className="example-image-link"
-            href="../src/assets/images/photo-1.jpg"
+            href="../src/assets/images/DSC_4042.jpg"
             data-lightbox="example-set"
             ><img
-              src="../src/assets/images/photo-1.jpg"
+              src="../src/assets/images/DSC_4042.jpg"
               className="example-image hover:grayscale hover:scale-105 transition-all"
               alt=""
           /></a>
@@ -279,10 +280,10 @@ const Home = () => {
         <div className="overflow-hidden hover:rounded-md transition-all">
           <a
             className="example-image-link"
-            href="../src/assets/images/photo-1.jpg"
+            href="../src/assets/images/DSC_4041.jpg"
             data-lightbox="example-set"
             ><img
-              src="../src/assets/images/photo-1.jpg"
+              src="../src/assets/images/DSC_4041.jpg"
               className="example-image hover:grayscale hover:scale-105 transition-all"
               alt=""
           /></a>
@@ -290,10 +291,10 @@ const Home = () => {
         <div className="overflow-hidden hover:rounded-md transition-all">
           <a
             className="example-image-link"
-            href="../src/assets/images/photo-1.jpg"
+            href="../src/assets/images/DSC_4027.jpg"
             data-lightbox="example-set"
             ><img
-              src="../src/assets/images/photo-1.jpg"
+              src="../src/assets/images/DSC_4027.jpg"
               className="example-image hover:grayscale hover:scale-105 transition-all"
               alt=""
           /></a>

@@ -10,7 +10,9 @@ import Activity from './pages/Activity'
 import Contact from './pages/Contact'
 import Event from './pages/Event'
 import Login from './pages/Login'
-import Admin from './pages/Admin'
+import AdminDasboard from './pages/admin/Admin'
+import Membre from './pages/admin/Membre'
+import SignUp from './pages/SignUp'
 // bibliothèque de routage
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -44,7 +46,9 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/event' element={<Event/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/admin' element={<Admin/>}/>
+      <Route path='/admin' element={<AdminDasboard/>}/>
+      <Route path='/membre' element={<Membre/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
       {/* Pour n'importe quel liens qui n'est pas définie au dessus */}
       <Route path='*' element={<Home/>}/>
      </Routes>
