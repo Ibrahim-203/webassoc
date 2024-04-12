@@ -2,7 +2,7 @@
 const footer = () => {
     return (
         <>
-        <footer class=" text-white mt-3">
+        <footer className=" text-white mt-3">
             <div className="grid md:grid-cols-2 gap-2 lg:grid-cols-4 py-5 bg-black/5 text-black">
             <div className="flex flex-col text-center">
                 <p className="text-xl">Adresse</p>

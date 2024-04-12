@@ -23,6 +23,8 @@ router.post('/login',async (req,res)=>{
     if(user){
         const accessToken = sign({username:user.username, id:user.id},"ImportanteSecretKey")
         res.json(accessToken )
+    }else{
+        res.json({error:"User doesn't exist"})
     }
 }) 
 

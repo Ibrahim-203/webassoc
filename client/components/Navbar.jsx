@@ -25,9 +25,9 @@ const Navbar = () => {
             style={{ top: isOpen ? "50px" : "-400px" }}
           >
             <ul className="flex md:flex-row px-3 py-4 w-full flex-col md:bg-primary bg-primary/95 backdrop-blur-sm md:items-center md:gap-[4vw] gap-8 font-mainFont text-sm">
-              {navItems.map((navItem) => (
+              {navItems.map((navItem,index) => (
                 <NavLink to={navItem.link} className = {(nav)=>(nav.isActive?"active":"")}>
-                <li>
+                <li key={index}>
                   <span
                     className="hover:text-secondary  cursor-pointer"
                     href="/"
