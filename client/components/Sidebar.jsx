@@ -7,6 +7,7 @@ import {
   AiOutlineDribbble,
   AiOutlineNotification,
   AiOutlineUser,
+  AiOutlineBook,
   AiOutlineLogout,
 } from "react-icons/ai";
 import { FaUserLock } from "react-icons/fa6";
@@ -22,6 +23,7 @@ const Sidebar = () => {
       { title: "Activités",link:'/activityBack', icon: <AiOutlineDribbble/> },
       { title: "Evènement",link:'/eventBack', icon: <AiOutlineNotification/> },
       { title: "Utilisateur",link:'/user', icon: <AiOutlineUser/> },
+      { title: "Enseignement",link:'/enseignement', icon: <AiOutlineBook/> },
       { title: "Se deconnecter",link:'/logOut', icon: <AiOutlineLogout/>,spacing: true }
     ];
 

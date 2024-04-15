@@ -10,11 +10,19 @@ import Activity from './pages/Activity'
 import Contact from './pages/Contact'
 import Event from './pages/Event'
 import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 import AdminDasboard from './pages/admin/Admin'
 import Membre from './pages/admin/Membre'
-import SignUp from './pages/SignUp'
+import ActivityBack from './pages/admin/ActivityBack';
+import EventBack from './pages/admin/EventBack';
+import User from './pages/admin/User';
+import Enseignement from './pages/admin/Enseignement';
+
+
 // bibliothèque de routage
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+
 
 
 function App() {
@@ -49,6 +57,10 @@ function App() {
       <Route path='/admin' element={<AdminDasboard/>}/>
       <Route path='/membre' element={<Membre/>}/>
       <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/activityBack' element={<ActivityBack/>}/>
+      <Route path='/user' element={<User/>}/>
+      <Route path='/eventBack' element={<EventBack/>}/>
+      <Route path='/enseignement' element={<Enseignement/>}/>
       {/* Pour n'importe quel liens qui n'est pas définie au dessus */}
       <Route path='*' element={<Home/>}/>
      </Routes>
