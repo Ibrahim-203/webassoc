@@ -12,11 +12,11 @@ import Event from './pages/Event'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import AdminDasboard from './pages/admin/Admin'
-import Membre from './pages/admin/Membre'
-import ActivityBack from './pages/admin/ActivityBack';
-import EventBack from './pages/admin/EventBack';
-import User from './pages/admin/User';
-import Enseignement from './pages/admin/Enseignement';
+import Membre from './pages/admin/Membre/Membre'
+import ActivityBack from './pages/admin/Activity/ActivityBack';
+import EventBack from './pages/admin/Event/EventBack';
+import User from './pages/admin/User/User';
+import Enseignement from './pages/admin/Enseignement/Enseignement';
 
 
 // bibliothèque de routage

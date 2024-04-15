@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Sidebar from "../../../components/Sidebar";
+import Sidebar from "../../../../components/Sidebar";
 import { FaEdit, FaTrash,FaPlus  } from "react-icons/fa";
 import axios from 'axios';
 
