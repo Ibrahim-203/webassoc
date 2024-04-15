@@ -13,6 +13,8 @@ const db = require("./models")
 //Routers 
 const userRouter = require("./routes/Users")
 app.use("/auth",userRouter); 
+const enseignementRouter = require("./routes/Enseignement")
+app.use("/enseignement",enseignementRouter); 
 
 db.sequelize.sync().then(()=>{
     app.listen(3001, ()=>{
