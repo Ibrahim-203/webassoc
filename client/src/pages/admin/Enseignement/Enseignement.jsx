@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Sidebar from "../../../../components/Sidebar";
 import { FaEdit, FaTrash,FaPlus  } from "react-icons/fa";
 import axios from 'axios';
-
+import { NavLink } from "react-router-dom";
 
 const Enseignement = () => {
 
@@ -20,40 +20,45 @@ const Enseignement = () => {
     <div className="flex text-white font-secondaryFont m-0">
       <Sidebar />
       <div className=" w-[80%] text-black p-7">
-        <div className="header flex justify-between ">
-          <h1 className="text-3xl font-semibold"> Listes des enseignements</h1>
-          <span className="bg-blue-600 rounded-md p-2 cursor-pointer text-white">
+        <div className="header flex justify-between flex-col lg:flex-row">
+          <h1 className="md:text-3xl text-xl font-semibold"> Listes des enseignements</h1>
+          <div className="mt-4 lg:mt-0">
+            <NavLink to="/addEnseignement">
+            <span className="bg-blue-600 rounded-md p-2 cursor-pointer text-white">
             Ajouter une enseignement
           </span>
+          </NavLink>
+          </div>
+          
         </div>
-        <div class="flex flex-col">
-  <div class="overflow-x-auto  ">
-    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-      <div class="overflow-hidden">
+        <div className="flex flex-col">
+  <div className="overflow-x-auto">
+    <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div className="overflow-hidden">
         <table
-          class="min-w-full text-left text-sm font-light text-surface dark:text-white">
+          className="min-w-full text-left text-sm font-light text-surface dark:text-white">
           <thead
-            class="border-b border-neutral-200 bg-white font-medium dark:border-white/10 dark:bg-body-dark">
+            className="border-b border-neutral-200 bg-white font-medium dark:border-white/10 dark:bg-body-dark">
             <tr>
-              <th scope="col" class="px-6 py-4">#</th>
-              <th scope="col" class="px-6 py-4">Libelle enseignement</th>
-              <th scope="col" class="px-6 py-4">Action</th>
+              <th scope="col" className="px-6 py-4">#</th>
+              <th scope="col" className="px-6 py-4">Libelle enseignement</th>
+              <th scope="col" className="px-6 py-4">Action</th>
             </tr>
           </thead>
           <tbody>
             {listeOfEnseignement.map((enseignement, index)=>(
               <tr
-              class="border-b border-neutral-200 bg-black/[0.02] dark:border-white/10" key={index}>
-              <td class="whitespace-nowrap px-6 py-4 font-medium">{index+1}</td>
-              <td class="whitespace-nowrap px-6 py-4">{enseignement.libelle}</td>
-              <td class="whitespace-nowrap px-6 py-4">
+              className="border-b border-neutral-200 bg-black/[0.02] dark:border-white/10" key={index}>
+              <td className="whitespace-nowrap px-6 py-4 font-medium">{index+1}</td>
+              <td className="whitespace-nowrap px-6 py-4">{enseignement.libelle}</td>
+              <td className="whitespace-nowrap px-6 py-4">
               <span className='flex gap-4'>
-                  <FaPlus  className='text-blue-300 text-2xl cursor-pointer'/>
-                  <FaEdit className='text-orange-300 text-2xl cursor-pointer'/>
-                  <FaTrash  className='text-red-600 text-2xl cursor-pointer'/>
+                  <FaPlus  className='text-blue-300 text-xl cursor-pointer'/>
+                  <FaEdit className='text-orange-300 text-xl cursor-pointer'/>
+                  <FaTrash  className='text-red-600 text-xl cursor-pointer'/>
                   </span>
               </td>
-            </tr>
+            </tr> 
             ))}
             
           </tbody>

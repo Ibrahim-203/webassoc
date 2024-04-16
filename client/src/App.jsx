@@ -17,6 +17,8 @@ import ActivityBack from './pages/admin/Activity/ActivityBack';
 import EventBack from './pages/admin/Event/EventBack';
 import User from './pages/admin/User/User';
 import Enseignement from './pages/admin/Enseignement/Enseignement';
+import AddEnseignement from './pages/admin/Enseignement/AddEnseignement';
+
 
 
 // bibliothèque de routage
@@ -61,6 +63,7 @@ function App() {
       <Route path='/user' element={<User/>}/>
       <Route path='/eventBack' element={<EventBack/>}/>
       <Route path='/enseignement' element={<Enseignement/>}/>
+      <Route path='/addEnseignement' element={<AddEnseignement />}/>
       {/* Pour n'importe quel liens qui n'est pas définie au dessus */}
       <Route path='*' element={<Home/>}/>
      </Routes>

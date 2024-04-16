@@ -10,7 +10,7 @@ router.get('/',async (req,res)=>{
 router.post('/',async (req,res)=>{
     const newEnseignement = req.body;
     await Enseignements.create(newEnseignement);
-    res.json(newEnseignement);
-})
-
+    res.json("Enseignement enregistrer");
+})  
+ 
 module.exports = router 
