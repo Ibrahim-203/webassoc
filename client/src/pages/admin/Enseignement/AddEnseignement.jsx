@@ -3,17 +3,15 @@ import Sidebar from "../../../../components/Sidebar";
 import { useFormik } from "formik";
 import axios from "axios";
 const AddEnseignement = () => {
-    const [enseignement, setEnseignement] = useState({})
-  const formik = useFormik({
-    initialValues: {
-        libelle: "",
+    const formik = useFormik({
+        initialValues: {
+            libelle: "",
     },
     onChange:(values)=>{
         console.log(values);
     },
     onSubmit: (values) => {
-      setEnseignement(values)
-      axios.post("http://localhost:3001/enseignement",enseignement).then((response)=>{
+      axios.post("http://localhost:3001/enseignement",values).then((response)=>{
         alert(response.data)
       })
     },

@@ -8,6 +8,12 @@ const Enseignement = () => {
 
   // Séclaration de variable
   const [listeOfEnseignement, setListOfEnseignement] = useState([])
+  const clicked = (id)=>{
+      axios.delete(`http://localhost:3001/enseignement/${id}`).then((response)=>{
+        alert(response.data)
+        location.reload()
+      })
+  }
 
   useEffect(()=>{
     
@@ -54,8 +60,10 @@ const Enseignement = () => {
               <td className="whitespace-nowrap px-6 py-4">
               <span className='flex gap-4'>
                   <FaPlus  className='text-blue-300 text-xl cursor-pointer'/>
-                  <FaEdit className='text-orange-300 text-xl cursor-pointer'/>
-                  <FaTrash  className='text-red-600 text-xl cursor-pointer'/>
+                  <FaEdit className='text-orange-300 text-xl cursor-pointer' />
+                  <FaTrash  className='text-red-600 text-xl cursor-pointer' onClick={()=>{
+                    clicked(enseignement.id)
+                  }} />
                   </span>
               </td>
             </tr> 

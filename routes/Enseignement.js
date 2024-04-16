@@ -11,6 +11,15 @@ router.post('/',async (req,res)=>{
     const newEnseignement = req.body;
     await Enseignements.create(newEnseignement);
     res.json("Enseignement enregistrer");
+}) 
+router.delete('/:id',async (req,res)=>{
+   const id = req.params.id
+    await Enseignements.destroy({
+        where : {
+            id: id,
+        }
+    })
+    res.json("Enseignement supprimer")
 })  
  
 module.exports = router 
